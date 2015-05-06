@@ -1,0 +1,10 @@
+Script para criar a base de dados
+
+
+create database jma;
+use jma;
+CREATE TABLE  recordes(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        jogador VARCHAR(50),
+        movimentos integer
+);
