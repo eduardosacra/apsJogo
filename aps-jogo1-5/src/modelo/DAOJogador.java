@@ -17,7 +17,7 @@ import factory.Conexao;
 
 public class DAOJogador {
 	public DAOJogador() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public ArrayList buscaTodosJogadores(){
@@ -46,7 +46,7 @@ public class DAOJogador {
 		    Conexao.close();
 		    
 	} catch (SQLException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 		    return jogadores;

@@ -62,7 +62,7 @@ public class TelaPrincipal extends JFrame {
 	
 
 	public void verifica(Elemento elemento) {
-		// TODO Auto-generated method stub
+		// TODO verificar se é necessário
 		
 	}
 

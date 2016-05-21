@@ -23,10 +23,10 @@ public class Conexao {
 			conexao = DriverManager.getConnection(url, login, senha);
 			System.out.println("Conectado com sucesso");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
@@ -37,7 +37,7 @@ public class Conexao {
 		try {
 			conexao.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
