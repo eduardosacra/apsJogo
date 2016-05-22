@@ -29,9 +29,6 @@ public class TelaRecorde extends JPanel{
 		this.pnJogadores.setBorder( BorderFactory.createTitledBorder("RECORDES") );
 		
 		this.pnPrincipal.add(btVoltar,BorderLayout.SOUTH);
-		//DAOJogador  dao = new DAOJogador();
-		
-		//ArrayList elementos = (ArrayList) dao.buscaTodosJogadores();
 		JLabel lbJogador = new JLabel("Jogador:");
 		JLabel lbMovimentos = new JLabel("Movimentos:");
 		JPanel pnteste1 = new JPanel(new GridLayout(1,2,5,5));

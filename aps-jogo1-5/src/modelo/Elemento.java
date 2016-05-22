@@ -1,7 +1,5 @@
 package modelo;
 
-import java.awt.Color;
-
 import javax.swing.ImageIcon;
 
 public class Elemento {

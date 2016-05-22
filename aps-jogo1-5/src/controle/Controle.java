@@ -3,7 +3,6 @@ package controle;
 import java.util.ArrayList;
 
 import modelo.DAOJogador;
-import modelo.Elemento;
 import modelo.Jogo;
 import visao.ElementoTela;
 import visao.TelaJogo;
@@ -20,7 +19,7 @@ public class Controle {
 		dao = new DAOJogador();
 		tlPrincipal = new TelaPrincipal(this);
 		tlPrincipal.setPainel(new TelaMenu(this));
-		tlPrincipal.setSize(750, 400);
+		tlPrincipal.trocaTamanho(750,400) ;
 		tlPrincipal.setVisible(true);
 	}
 
@@ -30,7 +29,7 @@ public class Controle {
 
 	public void iniciarJogo(String jogador) {
 		jogo = new Jogo(jogador);
-		tlPrincipal.setSize(1200, 700);
+		tlPrincipal.telaCheia();
 		tlPrincipal.setPainel(new TelaJogo(this.jogo.getElementos(), this));
 
 	}
@@ -63,7 +62,7 @@ public class Controle {
 	public void concluiu() {
 		if (this.dao.salvaJogador(this.jogo.getJogador())) {
 			this.telaJogo.avisaUsuario("Salvo com sucesso");
-			tlPrincipal.setSize(900, 520);
+			tlPrincipal.trocaTamanho(900, 520);
 			this.tlPrincipal.setPainel(new TelaMenu(this));
 
 		}
