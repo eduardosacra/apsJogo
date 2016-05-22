@@ -46,7 +46,8 @@ public class TelaPrincipal extends JFrame {
 		
 		
 		setTitle("JOGO DA MEMORIA ASSOCIATIVO" );
-		setSize(600, 420);
+		//setSize(600, 420);
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		//setResizable(false);
 	}
