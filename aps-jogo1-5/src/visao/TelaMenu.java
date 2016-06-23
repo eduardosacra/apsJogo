@@ -90,12 +90,16 @@ public class TelaMenu extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				boolean flag = true;
 				String jogador = "";
+				
 				jogador = JOptionPane.showInputDialog("Nome do Jogador");
-				if (jogador != null) {
+				if (jogador == null ) {
+					JOptionPane.showMessageDialog(null, "Tem certeza ??? \n Teste sua memória.");
+				} else if(jogador.length() > 0) {
+					
 					flag = false;
 					controle.iniciarJogo(jogador);
-				} else {
-					JOptionPane.showMessageDialog(null, "Insira o nome");
+				}else{
+					JOptionPane.showMessageDialog(null, "Nome inválido, insira novamente");
 				}
 			}
 		});
