@@ -44,6 +44,7 @@ public class TelaPrincipal extends JFrame {
 
 	public void telaCheia() {
 		this.setSize(this.getMaximumSize().width,this.getMaximumSize().height);
+		this.repaint();
 	}
 	
 }

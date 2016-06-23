@@ -8,12 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 import modelo.Elemento;
 import modelo.Jogador;
 import controle.Controle;
@@ -46,9 +48,38 @@ public class TelaJogo extends JPanel {
 		// JButton
 		this.btPause = new JButton("Pausar");
 		this.btPause.setSize(50, 50);
+		this.btPause.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int resposta =  0;
+				resposta = JOptionPane.showConfirmDialog(null, "Deseja voltar ? Sim ou Não");
+				if(resposta == JOptionPane.YES_OPTION){
+					JOptionPane.showMessageDialog(null, "Onde paramos???");
+				}if(resposta == JOptionPane.NO_OPTION){
+					JOptionPane.showMessageDialog(null, "Até a próxima! Bye!");
+					controle.cancelaJogo();
+				}				
+			}
+		});
 
 		this.btSairDoJogo = new JButton("Sair");
 		this.btSairDoJogo.setSize(50, 50);
+		this.btSairDoJogo.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int resposta =  0;
+				resposta = JOptionPane.showConfirmDialog(null, "Confirma sair ? Sim ou Não");
+				if(resposta == JOptionPane.YES_OPTION){
+					JOptionPane.showMessageDialog(null, "Até a próxima! Bye!");
+					controle.cancelaJogo();
+				}if(resposta == JOptionPane.NO_OPTION){
+					JOptionPane.showMessageDialog(null, "Onde paramos???");					
+				}
+				
+			}
+		} );
 
 		// JPanel
 		this.pnPrincipal = new JPanel(new BorderLayout(5, 5));
