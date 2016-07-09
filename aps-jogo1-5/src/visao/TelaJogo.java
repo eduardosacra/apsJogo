@@ -133,7 +133,7 @@ public class TelaJogo extends JPanel {
 		this.pnJogador
 				.add(new JLabel(
 						this.controle.getNomeJogador()
-								+ ", vamos testar nossa mem�ria, encontre o lugar certo de jogar o lixo."));
+								+ ", vamos testar nossa memofria, encontre o lugar certo de jogar o lixo."));
 
 		this.pnPrincipal.add(this.pnJogador, BorderLayout.NORTH);
 		this.pnPrincipal.add(this.pnBotoes, BorderLayout.WEST);
@@ -154,7 +154,7 @@ public class TelaJogo extends JPanel {
 
 		this.movimentos += 1;
 		this.lbPontos.setText("Movimentos: " + this.movimentos);
-		JOptionPane.showMessageDialog(null, "Errou");
+		JOptionPane.showMessageDialog(null, "Quase!!! Tente novamente.");
 
 		el1.setText("?");
 		el1.setEnabled(true);
