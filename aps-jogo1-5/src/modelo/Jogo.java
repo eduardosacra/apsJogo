@@ -7,10 +7,10 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 
 public class Jogo {
-	List elementos;
-	String[] lixeiras;
-	String[] lixos;
-	public Jogador jogador;
+	private List elementos;
+	private String[] lixeiras;
+	private String[] lixos;
+	private Jogador jogador;
 	private int contadorDeCombinacao;
 
 	public int getContadorDeCombinacao() {
@@ -27,7 +27,7 @@ public class Jogo {
 		this.jogador.setNome(jogador);
 		this.elementos = new ArrayList();
 		setaLixeiras();
-		;
+		
 		setaLixos();
 		setaImagem();
 		embaralhar();

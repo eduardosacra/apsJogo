@@ -18,7 +18,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import modelo.DAOJogador;
 import modelo.Elemento;
 import modelo.Jogador;
 import controle.Controle;
@@ -28,14 +27,11 @@ public class TelaMenu extends JPanel {
 	JButton btNovoJogo;
 	JPanel pn1, pnJogos, pnExGrid, pnExFlow;
 	Controle controle;
-
 	ImageIcon imagem;
-
 	JPanel pnPrincipal2, pnJogadores, pnJogadores2;
 	JButton btVoltar;
 	ArrayList jogadores;
 	JScrollPane sc;
-	DAOJogador dao;
 
 	public TelaMenu(Controle controle) {
 		this.controle = controle;
@@ -90,16 +86,18 @@ public class TelaMenu extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				boolean flag = true;
 				String jogador = "";
-				
+
 				jogador = JOptionPane.showInputDialog("Nome do Jogador");
-				if (jogador == null ) {
-					JOptionPane.showMessageDialog(null, "Tem certeza ??? \n Teste sua memória.");
-				} else if(jogador.length() > 0) {
-					
+				if (jogador == null) {
+					JOptionPane.showMessageDialog(null,
+							"Tem certeza ??? \n Teste sua memória.");
+				} else if (jogador.length() > 0) {
+
 					flag = false;
 					controle.iniciarJogo(jogador);
-				}else{
-					JOptionPane.showMessageDialog(null, "Nome inválido, insira novamente");
+				} else {
+					JOptionPane.showMessageDialog(null,
+							"Nome inválido, insira novamente");
 				}
 			}
 		});

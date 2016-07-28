@@ -43,7 +43,7 @@ public class DAOJogador {
 	}
 
 	public boolean salvaJogador(Jogador jogador) {
-		;
+		
 
 		try {
 
